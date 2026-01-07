@@ -8,6 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: build and talker and listener test
+        shell: bash
         run: |
           apt-get update
           apt-get install -y rsync
