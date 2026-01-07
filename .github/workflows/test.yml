@@ -3,7 +3,7 @@ on: push
 jobs:
   test:
     runs-on: ubuntu-24.04
-    container: #apfsds9/ubuntu24.04-ros2:latest
+    container:
       image: ros:jazzy
     steps:
       - uses: actions/checkout@v3
@@ -13,7 +13,7 @@ jobs:
           apt-get update
           apt-get install -y rsync
           source /opt/ros/jazzy/setup.bash
-          rsync -av ./ /root/ros2_ws/src/mypkg2/
+          rsync -av ./ /root/ros2_ws1/src/mypkg2/
           cd /root/ros2_ws
           colcon build
           bash ./src/mypkg2/test/talker_test.bash /root
