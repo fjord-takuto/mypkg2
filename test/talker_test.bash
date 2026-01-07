@@ -9,12 +9,12 @@ colcon build
 source install/setup.bash
 
 timeout 5 ros2 topic echo /keyboard_input std_msgs/msg/String > /tmp/topic.log &
-ECHO_PID=$!
+#ECHO_PID=$!
 
 sleep 3
 
 printf "hello\nq\n" | ros2 run mypkg talker
 
-wait $ECHO_PID
+#wait $ECHO_PID
 
 grep 'hello' /tmp/topic.log && echo OK
