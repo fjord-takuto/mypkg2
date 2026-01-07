@@ -7,12 +7,13 @@ jobs:
       image: ros:jazzy
     steps:
       - uses: actions/checkout@v3
-      - name: build and talker and listener test
+      - name: build / talker and listener test
         shell: bash
         run: |
           apt-get update
           apt-get install -y rsync
           source /opt/ros/jazzy/setup.bash
+          mkdir -p /root/ros2_ws1/src/mypkg2
           rsync -av ./ /root/ros2_ws1/src/mypkg2/
           cd /root/ros2_ws
           colcon build
