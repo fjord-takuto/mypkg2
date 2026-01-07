@@ -12,7 +12,7 @@ jobs:
         run: |
           apt-get update
           apt-get install -y rsync
-          source /opt/ros/jazzy/setup.bash
+          source /opt/ros/jazzy/.bashrc
           mkdir -p /root/ros2_ws1/src/mypkg2
           rsync -av ./ /root/ros2_ws1/src/mypkg2/
           cd /root/ros2_ws1
