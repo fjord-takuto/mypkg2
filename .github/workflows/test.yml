@@ -1,0 +1,14 @@
+#name: test
+#on: push
+#jobs:
+  #test:
+    #runs-on: ubuntu-24.04
+    #container: apfsds9/ubuntu24.04-ros2:latest
+    #steps:
+      #- uses: actions/checkout@v3
+      #- name: build and talker and listener test
+        #run: |
+          #rsync -av ./ /root/ros2_ws/src/mypkg/
+          #cd /root/ros2_ws
+          #bash ./src/mypkg/test/talker_test.bash /root
+          #bash ./src/mypkg/test/listener_test.bash /root
