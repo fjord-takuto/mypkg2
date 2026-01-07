@@ -15,7 +15,7 @@ jobs:
           source /opt/ros/jazzy/setup.bash
           mkdir -p /root/ros2_ws1/src/mypkg2
           rsync -av ./ /root/ros2_ws1/src/mypkg2/
-          cd /root/ros2_ws
+          cd /root/ros2_ws1
           colcon build
           bash ./src/mypkg2/test/talker_test.bash /root
           bash ./src/mypkg2/test/listener_test.bash /root
