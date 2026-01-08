@@ -8,7 +8,7 @@ jobs:
       matrix:
         ros-distro: ["humble", "iron", "jazzy"]
     container:
-      image: ros:${{ matrix.ros-distro }}
+      image: ros: ${{ matrix.ros-distro }}
     #strategy:
       #matrix:
         #python-version: ["3.10", "3.11", "3.12"]
