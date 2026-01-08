@@ -1,3 +1,7 @@
+#!/usr/bin/python3
+# SPDX-FileCopyrightText: 2025 Takuto Irie
+# SPDX-License-Identifier: BSD-3-Clause
+
 from setuptools import find_packages, setup
 import os
 from glob import glob
