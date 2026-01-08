@@ -8,17 +8,24 @@
 - HTTPSをクリックし、URLをコピー
 - 任意のディレクトリを用意し、`git clone <コピーしたURL>`を実行
 - 端末1
-  ```
-  colcon build
-  source install/setup.bash
-  ros2 run mypkg talker
-  [INFO] [1767860777.136012165] [keyboard_talker]: 入力してください（qで終了）
-  >> hello
-  [INFO] [1767860785.146372196] [keyboard_talker]: Sent: "hello"
-  >> q
-  [INFO] [1767860788.559070986] [keyboard_talker]: 終了します
-  ```
+```
+colcon build
+source install/setup.bash
+ros2 run mypkg talker
+[INFO] [1767860777.136012165] [keyboard_talker]: 入力してください（qで終了）
+>> hello
+[INFO] [1767860785.146372196] [keyboard_talker]: Sent: "hello"
+>> q
+[INFO] [1767860788.559070986] [keyboard_talker]: 終了します
+```
 - 端末2
+```
+colcon build
+source install/setup.bash
+ros2 run mypkg listener
+[INFO] [1767860785.162654679] [keyboard_listener]: Received: "hello"
+^C
+```
  
 ## 必要なソフトウェア	
 - Ros2
