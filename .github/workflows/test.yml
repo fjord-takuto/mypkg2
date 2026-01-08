@@ -6,12 +6,9 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        ros-distro: ["humble", "iron", "jazzy"]
+        ros-distro: ["jazzy"]
     container:
-      image: ros: ${{ matrix.ros-distro }}
-    #strategy:
-      #matrix:
-        #python-version: ["3.10", "3.11", "3.12"]
+      image: ros:${{ matrix.ros-distro }}
     steps:
       - uses: actions/checkout@v3
       - name: build / talker and listener test
